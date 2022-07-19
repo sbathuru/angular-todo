@@ -15,6 +15,7 @@ Application
      Application Build           : $ npm build
 
      Application Run             : $ ng serve
+                                   $ npm start
      Application Access          : http://localhost:4200
 
 
