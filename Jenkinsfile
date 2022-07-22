@@ -36,8 +36,8 @@ pipeline {
                          }
                           sh "docker build -t sbathuru/angular-todo:latest ."
                           sh "docker tag sbathuru/angular-todo:latest  sbathuru/angular-todo:${VER_NUM}"
-                          sh "docker push sbathuru/angular-todo:latest" 
                           sh "docker push sbathuru/angular-todo:${VER_NUM}" 
+                          sh "docker push sbathuru/angular-todo:latest" 
                  } 
           }
 
