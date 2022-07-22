@@ -38,11 +38,6 @@ pipeline {
                           sh "docker tag sbathuru/angular-todo:latest  sbathuru/angular-todo:${VER_NUM}"
                           sh "docker push sbathuru/angular-todo:latest" 
                           sh "docker push sbathuru/angular-todo:${VER_NUM}" 
-                         sh "pwd"
-                         //sh "docker build -t sbathuru/angular-todo:latest ."
-                          //sh "docker image tag sbathuru/angular-todo:latest  sbathuru/angular-todo:latest"
-                          //sh "docker push sbathuru/angular-todo:latest" 
-                          //sh "docker rmi sbathuru/angular-todo" 
                  } 
           }
 
