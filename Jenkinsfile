@@ -34,14 +34,14 @@ pipeline {
                           withCredentials([string(credentialsId: 'dockerHubPwd', variable: 'dockerpwd')]) {
                                  sh "docker login -u sbathuru -p ${dockerpwd}"
                          }
-                          sh "docker build -t bathurudocker/angular-todo:${VER_NUM} ."
-                          sh "docker image tag bathurudocker/angular-todo:${VER_NUM}  bathurudocker/devops-angularui:latest"
-                          sh "docker push bathurudocker/angular-todo:${VER_NUM}" 
+                          sh "docker build -t sbathuru/angular-todo:${VER_NUM} ."
+                          sh "docker image tag sbathuru/angular-todo:${VER_NUM}  bathurudocker/devops-angularui:latest"
+                          sh "docker push sbathuru/angular-todo:${VER_NUM}" 
                          sh "pwd"
                          //sh "docker build -t bathurudocker/devops-angularui:latest ."
                           //sh "docker image tag bathurudocker/devops-angularui:latest  bathurudocker/devops-angularui:latest"
                           //sh "docker push bathurudocker/devops-angularui:latest" 
-                          sh "docker rmi bathurudocker/angular-todo" 
+                          sh "docker rmi sbathuru/angular-todo" 
                  } 
           }
 
@@ -79,5 +79,5 @@ pipeline {
                     to: 'srinivas.bathuru@gmail.com'
            } 
          }
-         
+
 }
