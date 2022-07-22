@@ -35,7 +35,7 @@ pipeline {
                                  sh "docker login -u sbathuru -p ${dockerpwd}"
                          }
                           sh "docker build -t sbathuru/angular-todo:${VER_NUM} ."
-                          sh "docker image tag sbathuru/angular-todo:${VER_NUM}  sbathuru/devops-angularui:latest"
+                          sh "docker tag sbathuru/angular-todo:${VER_NUM}  sbathuru/devops-angularui:latest"
                           sh "docker push sbathuru/angular-todo:${VER_NUM}" 
                          sh "pwd"
                          //sh "docker build -t sbathuru/devops-angularui:latest ."
