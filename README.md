@@ -20,10 +20,10 @@ Application
 
 
 ### Docker Build Local Steps
-1. /Users/srinivas/devops/git/angular-dashboard
-2. docker build -t sbathuru/angular-dashboard:latest .
-3. docker push sbathuru/angular-dashboard:latest 
-4. docker run -p 80:80 --name srini2 sbathuru/angular-dashboard:1234
+1. /Users/srinivas/devops/git/angular-todo
+2. docker build -t sbathuru/angular-todo:latest .
+3. docker push sbathuru/angular-todo:latest 
+4. docker run -p 4200:80 --name angular-todo sbathuru/angular-todo
 
 
 # This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
