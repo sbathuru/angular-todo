@@ -41,7 +41,7 @@ pipeline {
                          //sh "docker build -t sbathuru/devops-angularui:latest ."
                           //sh "docker image tag sbathuru/devops-angularui:latest  sbathuru/devops-angularui:latest"
                           //sh "docker push sbathuru/devops-angularui:latest" 
-                          sh "docker rmi sbathuru/angular-todo" 
+                          //sh "docker rmi sbathuru/angular-todo" 
                  } 
           }
 
