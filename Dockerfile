@@ -14,5 +14,6 @@ CMD ["npm", "start"]
 FROM nginx:alpine
 #COPY src/nginx/etc/conf.d/default.conf /etc/nginx/conf/default.conf
 COPY --from=builder app/dist/angular-todo usr/share/nginx/html
+EXPOSE 80
 
 
