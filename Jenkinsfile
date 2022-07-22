@@ -34,8 +34,8 @@ pipeline {
                           withCredentials([string(credentialsId: 'dockerHubPwd', variable: 'dockerpwd')]) {
                                  sh "docker login -u sbathuru -p ${dockerpwd}"
                          }
-                          sh "docker build -t sbathuru/angular-todo:${VER_NUM} ."
-                          sh "docker tag sbathuru/angular-todo:${VER_NUM}  sbathuru/angular-todo:latest"
+                          sh "docker build -t sbathuru/angular-todo:latest ."
+                          sh "docker tag angular-todo:latest  sbathuru/angular-todo:${VER_NUM}"
                           sh "docker push sbathuru/angular-todo:${VER_NUM}" 
                          sh "pwd"
                          //sh "docker build -t sbathuru/angular-todo:latest ."
