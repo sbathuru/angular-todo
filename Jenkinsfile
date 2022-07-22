@@ -24,8 +24,8 @@ pipeline {
                           script{        // To add Scripted Pipeline sentences into a Declarative
                                     try{
                                             sh "pwd"
-                                             //sh "docker rm -f devops-devops-angularui || true"
-                                             //sh "docker rmi sbathuru/devops-devops-angularui || true"       //sh 'docker rmi $(docker images sbathuru/devops-devops-angularui)''
+                                             //sh "docker rm -f angular-todo || true"
+                                             //sh "docker rmi sbathuru/angular-todo || true"       //sh 'docker rmi $(docker images sbathuru/devops-devops-angularui)''
                                           }catch(error){
                                           //  do nothing if there is an exception
                                           }
@@ -35,12 +35,12 @@ pipeline {
                                  sh "docker login -u sbathuru -p ${dockerpwd}"
                          }
                           sh "docker build -t sbathuru/angular-todo:${VER_NUM} ."
-                          sh "docker tag sbathuru/angular-todo:${VER_NUM}  sbathuru/devops-angularui:latest"
+                          sh "docker tag sbathuru/angular-todo:${VER_NUM}  sbathuru/angular-todo:latest"
                           sh "docker push sbathuru/angular-todo:${VER_NUM}" 
                          sh "pwd"
-                         //sh "docker build -t sbathuru/devops-angularui:latest ."
-                          //sh "docker image tag sbathuru/devops-angularui:latest  sbathuru/devops-angularui:latest"
-                          //sh "docker push sbathuru/devops-angularui:latest" 
+                         //sh "docker build -t sbathuru/angular-todo:latest ."
+                          //sh "docker image tag sbathuru/angular-todo:latest  sbathuru/angular-todo:latest"
+                          //sh "docker push sbathuru/angular-todo:latest" 
                           //sh "docker rmi sbathuru/angular-todo" 
                  } 
           }
@@ -49,9 +49,9 @@ pipeline {
        steps {   
            sh "pwd"
            sshagent(['aws-ap-south-pem']) {
-               sh "ssh -o StrictHostKeyChecking=no ec2-user@docker.bathur.xyz  sudo docker rm -f devops-angularui || true"
-               //sh "ssh -o StrictHostKeyChecking=no ec2-user@docker.bathur.xyz  sudo docker run  -d -p 80:80 --name devops-angularui sbathuru/devops-angularui:${VER_NUM}"
-                sh "ssh -o StrictHostKeyChecking=no ec2-user@docker.bathur.xyz  sudo docker run  -d -p 80:80 --name devops-angularui sbathuru/devops-angularui:latest"
+               sh "ssh -o StrictHostKeyChecking=no ec2-user@docker.bathur.xyz  sudo docker rm -f angular-todo || true"
+               //sh "ssh -o StrictHostKeyChecking=no ec2-user@docker.bathur.xyz  sudo docker run  -d -p 80:80 --name angular-todo sbathuru/angular-todo:${VER_NUM}"
+                sh "ssh -o StrictHostKeyChecking=no ec2-user@docker.bathur.xyz  sudo docker run  -d -p 80:80 --name angular-todo sbathuru/angular-todo:latest"
           }
        }
      }     
