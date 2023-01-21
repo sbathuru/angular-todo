@@ -7,10 +7,10 @@ Prereqisties:
      $ npm install -g @angular/cli
 
 Application
-     Application package Install : $ npm install 
-     Application Build           : $ npm build
-     Application Run             : $ ng serve
-                                   $ npm start
+     Application package Install : $ npm install <br>
+     Application Build           : $ npm build.  <br>
+     Application Run             : $ ng serve    <br> 
+                                   $ npm start.  <br>
      Application Access          : http://localhost:4200
 
 
