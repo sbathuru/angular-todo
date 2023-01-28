@@ -15,7 +15,9 @@ pipeline {
            stage ('Git Checkout') {
                  steps {
                      echo "Heloo!!!!";
-                     git credentialsId: 'github-credentials' , url: 'https://github.com/sbathuru/angular-todo.git',  branch: 'master'   
+                     git credentialsId: 'github_credentials' , 
+                     url: 'https://github.com/sbathuru/angular-todo.git',  
+                     branch: 'master'   
                 }
            }
 
